@@ -1,5 +1,5 @@
 {
-  "name": "@example/basics",
+  "name": "vipatra.in",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -12,12 +12,15 @@
   "dependencies": {
     "astro": "^1.1.6",
     "file-saver": "^2.0.5",
-    "qrcode": "^1.5.1"
+    "qrcode": "^1.5.1",
+    "typescript": "^4.8.2"
   },
   "devDependencies": {
     "@astrojs/sitemap": "^1.0.0",
     "@astrojs/svelte": "^1.0.0",
     "@astrojs/tailwind": "^1.0.0",
+    "@types/file-saver": "^2.0.5",
+    "@types/qrcode": "^1.5.0",
     "svelte": "^3.46.4"
   }
 }

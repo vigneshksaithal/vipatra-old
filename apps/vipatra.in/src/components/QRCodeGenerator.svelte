@@ -1,10 +1,10 @@
-<script>
+<script lang="ts">
   import QRCode from 'qrcode';
   import { onMount } from 'svelte';
   import { saveAs } from 'file-saver';
 
   let text = 'https://vipatra.in',
-    canvasEl;
+    canvasEl: any;
 
   onMount(async () => {
     await QRCode.toCanvas(canvasEl, text);
@@ -15,7 +15,7 @@
   }
 
   async function downloadPng() {
-    await canvasEl.toBlob(function (blob) {
+    await canvasEl.toBlob(function (blob: any) {
       saveAs(blob, 'qr-code.png');
     });
   }
@@ -23,7 +23,7 @@
   async function downloadSvg() {
     await QRCode.toString(text, {
       type: 'svg',
-    }).then((svg) => {
+    }).then((svg: any) => {
       var blob = new Blob([svg]);
       saveAs(blob, 'qr-code.svg');
     });
