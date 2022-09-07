@@ -1,0 +1,106 @@
+---
+import Card from '../components/Card.astro';
+import Layout from '../layouts/Layout.astro';
+
+const cards = [
+  {
+    title: 'Digital menus',
+    description:
+      'You can showcase digital menus of your restaurant/hotel easily with Vipatra.',
+    icon: 'qr-code-scan',
+  },
+  {
+    title: 'Increased customers',
+    description:
+      'You can showcase digital menus of your restaurant/hotel easily with Vipatra.',
+    icon: 'arrow-up-circle',
+  },
+  {
+    title: 'Low cost',
+    description:
+      'Our software is on average 10 times cheaper and our pricing is also simple to understand.',
+    icon: 'wallet2',
+  },
+  {
+    title: 'Easy to use',
+    description: 'You can mange items easily with our simple to use dashboard.',
+    icon: 'check-circle',
+  },
+  {
+    title: 'Safe & secure',
+    description:
+      'We use the latest security protocols to ensure your data is safe and secure.',
+    icon: 'lock',
+  },
+  {
+    title: 'Free updates',
+    description:
+      'We provide free updates to our software and we are always working on new features.',
+    icon: 'cloud-arrow-down',
+  },
+];
+---
+
+<Layout title='Welcome to Astro.'>
+  <!-- Hero section -->
+
+  <div class='grid grid-cols-1 md:grid-cols-2 gap-10 justify-center py-10'>
+    <div class='self-center text-center md:text-left'>
+      <h1 class='mb-2'>
+        <span class='bg-orange-600 text-white'>Digital</span><span
+          class='bg-blue-700 text-white'>i</span
+        ><span class='bg-green-600 text-white'>zing</span>
+      </h1>
+      <h2 class='mb-8'>Restaurants</h2>
+      <p class='mb-12'>
+        Providing digital menus to restaurants and hotels to increase their
+        sales.
+      </p>
+      <div class='text-center md:text-left'>
+        <a
+          class='px-10 py-4 text-center font-semibold rounded-full bg-indigo-500 text-white'
+          href='/'>Contact Us</a
+        >
+      </div>
+    </div>
+    <div>
+      <img src='/images/undraw_accept_terms_re_lj38.svg' alt='' />
+    </div>
+
+    <!-- Cards section -->
+
+    <div class='md:col-span-2 py-10'>
+      <h2 class='text-center mt-10 lg:mt-14 mb-10 lg:mb-14'>
+        Why choose Vipatra?
+      </h2>
+      <div class='grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6'>
+        {
+          cards.map((card) => (
+            <Card
+              title={card.title}
+              description={card.description}
+              icon={card.icon}
+            />
+          ))
+        }
+      </div>
+    </div>
+
+    <!-- CTA -->
+
+    <div
+      class='md:col-span-2 grid grid-cols-1 lg:grid-cols-2 border-2 border-green-400 bg-green-400 p-10 lg:p-24 w-full mx-auto max-w-6xl rounded-xl'
+    >
+      <h2 class='place-self-center text-center md:text-left'>
+        Get digital menu for <span class='text-red-60'>*FREE</span>
+        <div class='text-sm text-gray-800 font-normal align-middle mt-2'>
+          *Free for 3 months, comes with free QR Code stands, 1-1 support.
+        </div>
+      </h2>
+      <a
+        class='place-self-center text-lg bg-white text-black font-semibold px-8 py-3 rounded-full mt-8 lg:mt-0'
+        href='/contact-us'>Contact Us</a
+      >
+    </div>
+  </div>
+</Layout>

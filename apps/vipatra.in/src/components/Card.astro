@@ -1,0 +1,15 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  icon?: string;
+}
+
+const { title, description, icon } = Astro.props;
+---
+
+<div class='grid grid-cols-1 p-8 border-2 border-slate-100 bg-white rounded-xl'>
+  {icon && <i class={`bi bi-${icon} text-4xl text-black mb-4`} />}
+  <h4 class='mb-2'>{title}</h4>
+  <p>{description}</p>
+</div>
