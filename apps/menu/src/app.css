@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Roboto', sans-serif;
+}
+
+input {
+  @apply w-full px-3 py-2 border-2 border-gray-200 rounded-md;
+}
+
+input:hover {
+  @apply border-indigo-600;
+}
+
+.btn-primary {
+  @apply w-full text-base px-4 py-2 bg-blue-600 text-white rounded-lg;
+}
+
+button {
+  @apply hover:brightness-110 rounded-lg shadow-sm;
+}
