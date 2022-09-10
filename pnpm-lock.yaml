@@ -11,6 +11,7 @@ importers:
   apps/menu:
     specifiers:
       '@sveltejs/adapter-auto': next
+      '@sveltejs/adapter-static': 1.0.0-next.42
       '@sveltejs/kit': next
       '@types/cookie': ^0.5.1
       autoprefixer: ^10.4.8
@@ -27,6 +28,7 @@ importers:
       firebase: 9.9.4
     devDependencies:
       '@sveltejs/adapter-auto': 1.0.0-next.72
+      '@sveltejs/adapter-static': 1.0.0-next.42
       '@sveltejs/kit': 1.0.0-next.480_svelte@3.50.1+vite@3.1.0
       '@types/cookie': 0.5.1
       autoprefixer: 10.4.8_postcss@8.4.16
@@ -1185,6 +1187,10 @@ packages:
       esbuild: 0.14.54
       set-cookie-parser: 2.5.1
       tiny-glob: 0.2.9
+    dev: true
+
+  /@sveltejs/adapter-static/1.0.0-next.42:
+    resolution: {integrity: sha512-BLMQY8zfUibex5FE3zkMXdkW4l/n+1tecUrCxmmO5jc8vEuZc41VQdmQtDifX80Bf1pCG3RH7151tJ+jqte2lg==}
     dev: true
 
   /@sveltejs/adapter-vercel/1.0.0-next.73:
