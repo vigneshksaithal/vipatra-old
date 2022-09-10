@@ -2,6 +2,7 @@
   import { page } from '$app/stores';
   import { doc, getDoc, getFirestore } from 'firebase/firestore/lite';
   import { onMount } from 'svelte';
+  import { getPerformance } from 'firebase/performance';
 
   var menu_id: string;
   var storeName: string;
@@ -10,6 +11,7 @@
   onMount(async () => {
     menu_id = $page.params.menu_id;
     await get_menu_data(menu_id);
+    const perf = getPerformance();
   });
 
   async function get_menu_data(menu_id: string) {
