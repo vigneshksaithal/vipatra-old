@@ -2,14 +2,14 @@
 export interface Props {
   title: string;
   description: string;
-  icon?: string;
+  iconUrl?: string;
 }
 
-const { title, description, icon } = Astro.props;
+const { title, description, iconUrl } = Astro.props;
 ---
 
 <div class='grid grid-cols-1 p-8 border-2 border-slate-100 bg-white rounded-xl'>
-  {icon && <i class={`bi bi-${icon} text-4xl text-black mb-4`} />}
+  {iconUrl && <img class='h-8 w-8 text-black mb-4' src={iconUrl} />}
   <h4 class='mb-2'>{title}</h4>
   <p>{description}</p>
 </div>

@@ -6,37 +6,38 @@ const cards = [
   {
     title: 'Digital menus',
     description:
-      'You can showcase digital menus of your restaurant/hotel easily with Vipatra.',
-    icon: 'qr-code-scan',
-  },
-  {
-    title: 'Increased customers',
-    description:
-      'You can showcase digital menus of your restaurant/hotel easily with Vipatra.',
-    icon: 'arrow-up-circle',
-  },
-  {
-    title: 'Low cost',
-    description:
-      'Our software is on average 10 times cheaper and our pricing is also simple to understand.',
-    icon: 'wallet2',
+      'You can showcase menus & brochures of your restaurant/hotel digitally with Vipatra.',
+    iconURL: '/icons/phone.svg',
   },
   {
     title: 'Easy to use',
     description: 'You can mange items easily with our simple to use dashboard.',
-    icon: 'check-circle',
+    iconURL: '/icons/check-circle.svg',
+  },
+  {
+    title: 'Reduced cost',
+    description:
+      'On an average you can save upto 50% of your maintenance cost.',
+    iconURL: '/icons/down-arrow-circle.svg',
   },
   {
     title: 'Safe & secure',
     description:
       'We use the latest security protocols to ensure your data is safe and secure.',
-    icon: 'lock',
+    iconURL: '/icons/lock.svg',
   },
+  {
+    title: 'Low cost',
+    description:
+      'Our software is on average 10 times cheaper and our pricing is also simple to understand.',
+    iconURL: '/icons/down-arrow-circle.svg',
+  },
+
   {
     title: 'Free updates',
     description:
       'We provide free updates to our software and we are always working on new features.',
-    icon: 'cloud-arrow-down',
+    iconURL: '/icons/download.svg',
   },
 ];
 ---
@@ -46,11 +47,7 @@ const cards = [
 
   <div class='grid grid-cols-1 md:grid-cols-2 gap-10 justify-center py-10'>
     <div class='self-center text-center md:text-left'>
-      <h1 class='mb-2'>
-        <span class='bg-orange-600 text-white'>Digital</span><span
-          class='bg-blue-700 text-white'>i</span
-        ><span class='bg-green-600 text-white'>zing</span>
-      </h1>
+      <h1 class='mb-2 underline'>Digitalizing</h1>
       <h2 class='mb-8'>Restaurants</h2>
       <p class='mb-12'>
         Providing digital menus to restaurants and hotels to increase their
@@ -63,9 +60,7 @@ const cards = [
         >
       </div>
     </div>
-    <div>
-      <img src='/images/undraw_accept_terms_re_lj38.svg' alt='' />
-    </div>
+    <div></div>
 
     <!-- Cards section -->
 
@@ -79,7 +74,7 @@ const cards = [
             <Card
               title={card.title}
               description={card.description}
-              icon={card.icon}
+              iconUrl={card.iconURL}
             />
           ))
         }
@@ -92,7 +87,7 @@ const cards = [
       class='md:col-span-2 grid grid-cols-1 lg:grid-cols-2 border-2 border-green-400 bg-green-400 p-10 lg:p-24 w-full mx-auto max-w-6xl rounded-xl'
     >
       <h2 class='place-self-center text-center md:text-left'>
-        Get digital menu for <span class='text-red-60'>*FREE</span>
+        Get digital menu for <span class='text-red-60'>free</span>
         <div class='text-sm text-gray-800 font-normal align-middle mt-2'>
           *Free for 3 months, comes with free QR Code stands, 1-1 support.
         </div>
