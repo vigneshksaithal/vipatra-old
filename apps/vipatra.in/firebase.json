@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "vipatra-website",
     "public": "dist",
     "ignore": [
       "firebase.json",
