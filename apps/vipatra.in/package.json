@@ -10,13 +10,12 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^1.2.1",
+    "astro": "^1.2.2",
     "file-saver": "^2.0.5",
     "qrcode": "^1.5.1",
     "typescript": "^4.8.3"
   },
   "devDependencies": {
-    "@astrojs/image": "^0.6.1",
     "@astrojs/sitemap": "^1.0.0",
     "@astrojs/svelte": "^1.0.0",
     "@astrojs/tailwind": "^1.0.0",
