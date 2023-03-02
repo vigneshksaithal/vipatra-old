@@ -14,6 +14,7 @@ importers:
       '@sveltejs/kit': 1.8.8
       '@types/cookie': ^0.5.1
       autoprefixer: ^10.4.13
+      pocketbase: ^0.12.0
       postcss: ^8.4.21
       svelte: ^3.55.1
       svelte-check: ^3.0.4
@@ -22,6 +23,8 @@ importers:
       tslib: ^2.5.0
       typescript: ^4.9.5
       vite: ^4.1.4
+    dependencies:
+      pocketbase: 0.12.0
     devDependencies:
       '@sveltejs/adapter-static': 2.0.1_@sveltejs+kit@1.8.8
       '@sveltejs/kit': 1.8.8_svelte@3.55.1+vite@4.1.4
@@ -3429,6 +3432,10 @@ packages:
   /pngjs/5.0.0:
     resolution: {integrity: sha512-40QW5YalBNfQo5yRYmiw7Yz6TKKVr3h6970B2YE+3fQpsWcrbj1PzJgxeJ19DRQjhMbKPIuMY8rFaXc8moolVw==}
     engines: {node: '>=10.13.0'}
+    dev: false
+
+  /pocketbase/0.12.0:
+    resolution: {integrity: sha512-q+a9siWZisQu50dex6oZP0Xqxden9DDL1JalopVdkHntGHyBBcbcASPowaA8A0bO5grPjN1wSHnInwP+UuCp9A==}
     dev: false
 
   /postcss-import/14.1.0_postcss@8.4.21:
