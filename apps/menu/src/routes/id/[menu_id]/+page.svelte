@@ -1,8 +1,10 @@
 <script lang="ts">
+  import PocketBase from 'pocketbase';
+
   import { page } from '$app/stores';
-  import { doc, getDoc, getFirestore } from 'firebase/firestore/lite';
   import { onMount } from 'svelte';
-  import { getPerformance } from 'firebase/performance';
+
+  import '$lib/app.css';
 
   var menu_id: string;
   var storeName: string;
@@ -10,29 +12,17 @@
 
   onMount(async () => {
     menu_id = $page.params.menu_id;
-    await get_menu_data(menu_id);
-    const perf = getPerformance();
+    await get_data();
   });
 
-  async function get_menu_data(menu_id: string) {
-    const db = getFirestore();
-    const docRef = doc(db, 'menu', menu_id);
-    const docSnap = await getDoc(docRef);
+  async function get_data() {
+    const pb = new PocketBase('http://143.110.242.70');
 
-    if (docSnap.exists()) {
-      const data = docSnap.data();
-      storeName = data.store_name;
+    const record = await pb
+      .collection('menu')
+      .getFirstListItem('store_name="The Fries Kingdom"');
 
-      data.items.forEach((item: any) => {
-        items.push({
-          item: item.item,
-          price: item.price,
-        });
-        items = items;
-      });
-    } else {
-      console.log('No such document!');
-    }
+    storeName = record.id;
   }
 </script>
 
@@ -40,7 +30,7 @@
   <title>Home</title>
   <meta name="description" content="Vipatra Menu" />
   <nav class="bg-green-400 mx-auto py-3">
-    <div class="text-center text-sm text-whit">vipatra | menu</div>
+    <div class="text-center text-sm text-white">vipatra | menu</div>
   </nav>
 </svelte:head>
 
@@ -50,7 +40,7 @@
   >
     <div class="py-4 bg-white rounded-t-lg">
       <h3 class="text-lg font-bold ml-4">
-        {storeName}
+        Store: {storeName}
       </h3>
     </div>
     {#each items as item, index}
